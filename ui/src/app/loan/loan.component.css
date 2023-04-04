@@ -1,0 +1,52 @@
+@keyframes anim {
+
+    25%{
+        letter-spacing: 2px;
+        color:blue;
+    }
+    75%{
+        letter-spacing: 5px;
+        color:indigo;
+    }
+    
+}
+
+body{
+    display: inline-block;
+    width: 100%;
+}
+h3{
+    text-align: center;
+    color:blueviolet;
+    font-family:Georgia, 'Times New Roman';
+    font-size: 40px;
+    animation: anim 4s linear infinite;
+}
+
+table{
+    width:90%;
+    margin:auto;
+    border-collapse:separate;
+    border-spacing:4px;
+    font-family:sans-serif;
+    font-weight:bold;
+}
+
+th{
+    border-radius:10px 10px 0px 0px;
+    padding:1% 1%;
+    color:#ffffff;
+    background-color:orange;
+    text-align:center;
+}
+
+td{
+    padding:1% 1%;
+    color:slategrey;
+    background-color:rgba(255, 255, 0, 0.6);
+    text-align:center;
+}
+
+tr:hover{
+    opacity:0.3;
+}
