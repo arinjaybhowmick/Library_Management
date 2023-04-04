@@ -13,9 +13,14 @@ Library Management Application
 
 ## How to start the application
 ```
-$ git clone https://github.com/crkarthik11/openlibrary.git
+$ git clone https://github.com/arinjaybhowmick/Library_Management.git
 $ cd openlibrary
 $ cd backend
 $ gradlew bootrun
 $ open localhost:8080 in web browser
+$ open another terminal
+$ cd openlibrary
+$ cd ui
+$ npm start
+$ open localhost:4200 in web browser
 ```
