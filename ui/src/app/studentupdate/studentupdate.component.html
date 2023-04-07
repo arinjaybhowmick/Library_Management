@@ -1,0 +1,32 @@
+<h3>Update Student</h3>
+
+<form [formGroup]="studentsForm" (ngSubmit)="updateStudent()">
+    <div>
+    <label>Name</label><label class="req">*</label>
+    <input type="text" formControlName="name">
+    </div>
+
+    <div>
+    <label>Department</label><label class="req">*</label>
+    <input type="text" formControlName="department">
+    </div>
+
+    <div>
+    <label>Roll Number</label><label class="req">*</label>
+    <input type="text" formControlName="rollNumber">
+    </div>
+
+    <div>
+    <label>Birth Date</label>
+    <input type="text" formControlName="birthDate">
+    </div>
+
+    <div>
+    <label>Mobile Number</label>
+    <input type="text" formControlName="mobileNumber">
+    </div>
+
+    <div *ngIf="studentsForm.valid">
+        <input class="save" type="submit" value="Save">
+    </div>
+</form>

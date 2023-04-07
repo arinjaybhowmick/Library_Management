@@ -1,0 +1,22 @@
+<h3>Update Author</h3>
+
+<form [formGroup]="authorsForm" (ngSubmit)="updateAuthor()">
+    <div>
+    <label>Name</label><label class="req">*</label>
+    <input type="text" formControlName="name">
+    </div>
+
+    <div>
+    <label>Birth Date</label>
+    <input type="text" formControlName="birthDate">
+    </div>
+
+    <div>
+    <label>Nationality</label><label class="req">*</label>
+    <input type="text" formControlName="nationality">
+    </div>
+
+    <div *ngIf="authorsForm.valid">
+        <input class="save" type="submit" value="Save">
+    </div>
+</form>

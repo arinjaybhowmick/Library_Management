@@ -7,14 +7,38 @@
 </head>
 
 <body>
-<h3>Admins</h3>
-<table>
+<div>
+    <img src="../assets/Admin.png" alt="Admin Image">
+    <h3>{{title}}</h3>
+</div>
+
+<button class="add" (click)="addAdmins()">Add</button>
+
+<table *ngIf="admins.length >= 1">
+    <thead>
     <tr>
-        <th>id</th><th>name</th><th>username</th><th>password</th>
+        <!-- <th>ID</th> -->
+        <th>Name</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Action</th>
     </tr>
-    <tr>
-        <td>2132</td><td>Librarian</td><td>stcet</td><td>012345</td>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let admin of admins">
+        <!-- <td>{{admin.id}}</td> -->
+        <td>{{admin.name}}</td>
+        <td>{{admin.username}}</td>
+        <td>{{admin.password}}</td>
+        <td>
+            <button class="delete" (click)="deleteAdmin(admin.id)">Delete</button>
+            <button class="update" (click)="updateAdmin(admin.id)">Update</button>
+        </td>
     </tr>
+    </tbody>
 </table>
+<h4 *ngIf="admins.length < 1">No data</h4>
+<h4 *ngIf="admins.length >= 1">Count : {{count}}</h4>
 </body>
 </html>

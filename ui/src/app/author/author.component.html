@@ -7,14 +7,39 @@
 </head>
 
 <body>
-<h3>Authors</h3>
-<table>
+<div>
+    <img src="../assets/Author.png" alt="Author Image">
+    <h3>{{title}}</h3>
+</div>
+
+<button class="add" (click)="addAuthors()">Add</button>
+
+<table *ngIf="authors.length >= 1">
+    <thead>
     <tr>
-        <th>id</th><th>name</th><th>birthDate</th><th>nationality</th>
+        <!-- <th>ID</th> -->
+        <th>Name</th>
+        <th>Birth Date</th>
+        <th>Nationality</th>
+        <th>Action</th>
+
     </tr>
-    <tr>
-        <td>8492</td><td>John Snow</td><td>Dec 1921</td><td>American</td>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let author of authors">
+        <!-- <td>{{author.id}}</td> -->
+        <td>{{author.name}}</td>
+        <td>{{author.birthDate}}</td>
+        <td>{{author.nationality}}</td>
+        <td>
+            <button class="delete" (click)="deleteAuthor(author.id)">Delete</button>
+            <button class="update" (click)="updateAuthor(author.id)">Update</button>
+        </td>
     </tr>
+    </tbody>
 </table>
+<h4 *ngIf="authors.length < 1">No data</h4>
+<h4 *ngIf="authors.length >= 1">Count : {{count}}</h4>
 </body>
 </html>

@@ -1,0 +1,22 @@
+<h3>Update Admin</h3>
+
+<form [formGroup]="adminsForm" (ngSubmit)="updateAdmin()">
+    <div>
+    <label>Name</label><label class="req">*</label>
+    <input type="text" formControlName="name">
+    </div>
+
+    <div>
+    <label>Username</label><label class="req">*</label>
+    <input type="text" formControlName="username">
+    </div>
+
+    <div>
+    <label>Password</label><label class="req">*</label>
+    <input type="text" formControlName="password">
+    </div>
+
+    <div *ngIf="adminsForm.valid">
+        <input class="save" type="submit" value="Save">
+    </div>
+</form>

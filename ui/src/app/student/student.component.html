@@ -7,14 +7,42 @@
 </head>
 
 <body>
-<h3>Students</h3>
-<table>
-    <tr>
-        <th>id</th><th>name</th><th>department</th><th>rollNumber</th><th>birthDate</th><th>mobileNumber</th>
-    </tr>
-    <tr>
-        <td>34</td><td>Arinjay</td><td>CSE</td><td>8</td><td>Dec 2002</td><td>84817399192</td>
-    </tr>
-</table>
-</body>
-</html>
+    <div>
+        <img src="../assets/Student.png" alt="Student Image">
+        <h3>{{title}}</h3>
+    </div>
+    
+    <button class="add" (click)="addStudents()">Add</button>
+    
+    <table *ngIf="students.length >= 1">
+        <thead>
+        <tr>
+            <!-- <th>ID</th> -->
+            <th>Name</th>
+            <th>Department</th>
+            <th>Roll Number</th>
+            <th>Birth Date</th>
+            <th>Mobile Number</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+    
+        <tbody>
+        <tr *ngFor="let student of students">
+            <!-- <td>{{student.id}}</td> -->
+            <td>{{student.name}}</td>
+            <td>{{student.department}}</td>
+            <td>{{student.rollNumber}}</td>
+            <td>{{student.birthDate}}</td>
+            <td>{{student.mobileNumber}}</td>
+            <td>
+                <button class="delete" (click)="deleteStudent(student.id)">Delete</button>
+                <button class="update" (click)="updateStudent(student.id)">Update</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <h4 *ngIf="students.length < 1">No data</h4>
+    <h4 *ngIf="students.length >= 1">Count : {{count}}</h4>
+    </body>
+    </html>

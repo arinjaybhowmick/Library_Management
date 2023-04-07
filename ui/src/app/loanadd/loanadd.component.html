@@ -1,0 +1,32 @@
+<h3>Add Loan</h3>
+
+<form [formGroup]="loansForm" (ngSubmit)="saveLoan()">
+    <div>
+    <label>Book ID</label><label class="req">*</label>
+    <input type="number" formControlName="bookId">
+    </div>
+
+    <div>
+    <label>Student ID</label><label class="req">*</label>
+    <input type="number" formControlName="studentId">
+    </div>
+
+    <div>
+    <label>Checkout Date</label><label class="req">*</label>
+    <input type="text" formControlName="checkoutDate">
+    </div>
+
+    <div>
+    <label>Due Date</label><label class="req">*</label>
+    <input type="text" formControlName="dueDate">
+    </div>
+
+    <div>
+    <label>Return Date</label>
+    <input type="text" formControlName="returnDate">
+    </div>
+
+    <div *ngIf="loansForm.valid">
+        <input class="save" type="submit" value="Save">
+    </div>
+</form>

@@ -7,14 +7,42 @@
 </head>
 
 <body>
-<h3>Loans</h3>
-<table>
+<div>
+    <img src="../assets/Loan.png" alt="Loan Image">
+    <h3>{{title}}</h3>
+</div>
+
+<button class="add" (click)="addLoans()">Add</button>
+
+<table *ngIf="loans.length >= 1">
+    <thead>
     <tr>
-        <th>id</th><th>bookId</th><th>studentId</th><th>checkoutDate</th><th>dueDate</th><th>returnDate</th>
+        <!-- <th>ID</th> -->
+        <th>Book Id</th>
+        <th>Student ID</th>
+        <th>Checkout Date</th>
+        <th>Due Date</th>
+        <th>Return Date</th>
+        <th>Action</th>
     </tr>
-    <tr>
-        <td>92</td><td>8349</td><td>32</td><td>Jan 2023</td><td>Feb 2023</td><td>March 2023</td>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let loan of loans">
+        <!-- <td>{{loan.id}}</td> -->
+        <td>{{loan.bookId}}</td>
+        <td>{{loan.studentId}}</td>
+        <td>{{loan.checkoutDate}}</td>
+        <td>{{loan.dueDate}}</td>
+        <td>{{loan.returnDate}}</td>
+        <td>
+            <button class="delete" (click)="deleteLoan(loan.id)">Delete</button>
+            <button class="update" (click)="updateLoan(loan.id)">Update</button>
+        </td>
     </tr>
+    </tbody>
 </table>
+<h4 *ngIf="loans.length < 1">No data</h4>
+<h4 *ngIf="loans.length >= 1">Count : {{count}}</h4>
 </body>
 </html>

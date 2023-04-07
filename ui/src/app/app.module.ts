@@ -14,6 +14,17 @@ import { MenuComponent } from './menu/menu.component';
 import { BookaddComponent } from './bookadd/bookadd.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BookupdateComponent } from './bookupdate/bookupdate.component';
+import { AdminaddComponent } from './adminadd/adminadd.component';
+import { AdminupdateComponent } from './adminupdate/adminupdate.component';
+import { AuthoraddComponent } from './authoradd/authoradd.component';
+import { AuthorupdateComponent } from './authorupdate/authorupdate.component';
+import { PublisheraddComponent } from './publisheradd/publisheradd.component';
+import { PublisherupdateComponent } from './publisherupdate/publisherupdate.component';
+import { StudentaddComponent } from './studentadd/studentadd.component';
+import { StudentupdateComponent } from './studentupdate/studentupdate.component';
+import { LoanaddComponent } from './loanadd/loanadd.component';
+import { LoanupdateComponent } from './loanupdate/loanupdate.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +37,18 @@ import { HttpClientModule } from '@angular/common/http';
     AuthorComponent,
     HomeComponent,
     MenuComponent,
-    BookaddComponent
+    BookaddComponent,
+    BookupdateComponent,
+    AdminaddComponent,
+    AdminupdateComponent,
+    AuthoraddComponent,
+    AuthorupdateComponent,
+    PublisheraddComponent,
+    PublisherupdateComponent,
+    StudentaddComponent,
+    StudentupdateComponent,
+    LoanaddComponent,
+    LoanupdateComponent
   ],
   imports: [
     BrowserModule,

@@ -25,6 +25,12 @@ export class BookComponent implements OnInit {
     this.router.navigateByUrl('/book-add')
   }
 
+  
+  updateBook(bookId : number){
+    console.log("update book button clicked ")
+    this.router.navigate(['/book-update',bookId])
+  }
+
   fetchBooks(){
 
     this.http.get("http://localhost:8080/book/allbooks")
@@ -62,5 +68,4 @@ export class BookComponent implements OnInit {
       console.error('Error deleting book', error);
     });
   }
-
 }

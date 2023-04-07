@@ -7,10 +7,14 @@
 </head>
 
 <body>
-<h3>{{title}}</h3>
-<button class="add" (click)="addBooks()">Add Book</button>
-<button class="count">Count : {{count}}</button>
-<table>
+<div>
+    <img src="../assets/Book.png" alt="Book Image">
+    <h3>{{title}}</h3>
+</div>
+
+<button class="add" (click)="addBooks()">Add</button>
+
+<table *ngIf="books.length >= 1">
     <thead>
     <tr>
         <!-- <th>ID</th> -->
@@ -41,9 +45,12 @@
         <td>{{book.subgenre}}</td>
         <td>
             <button class="delete" (click)="deleteBook(book.id)">Delete</button>
+            <button class="update" (click)="updateBook(book.id)">Update</button>
         </td>
     </tr>
     </tbody>
 </table>
+<h4 *ngIf="books.length < 1">No data</h4>
+<h4 *ngIf="books.length >= 1">Count : {{count}}</h4>
 </body>
 </html>

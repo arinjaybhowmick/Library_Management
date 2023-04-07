@@ -1,4 +1,4 @@
-<h3>Add Books</h3>
+<h3>Add Book</h3>
 
 <form [formGroup]="booksForm" (ngSubmit)="saveBook()">
     <div>
@@ -47,6 +47,6 @@
     </div>
 
     <div *ngIf="booksForm.valid">
-        <input class="save" type="submit" value="Save Book">
+        <input class="save" type="submit" value="Save">
     </div>
 </form>

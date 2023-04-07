@@ -1,0 +1,52 @@
+<h3>Update Book</h3>
+
+<form [formGroup]="booksForm" (ngSubmit)="updateBook()">
+    <div>
+    <label>Title</label><label class="req">*</label>
+    <input type="text" formControlName="title">
+    </div>
+
+    <div>
+    <label>Author</label><label class="req">*</label>
+    <input type="text" formControlName="author">
+    </div>
+
+    <div>
+    <label>ISBN</label><label class="req">*</label>
+    <input type="text" formControlName="isbn">
+    </div>
+
+    <div>
+    <label>Publication Date</label>
+    <input type="text" formControlName="publicationDate">
+    </div>
+
+    <div>
+    <label>Publisher</label><label class="req">*</label>
+    <input type="text" formControlName="publisher">
+    </div>
+
+    <div>
+    <label>Copies</label><label class="req">*</label>
+    <input type="number" formControlName="copies">
+    </div>
+
+    <div>
+    <label>Category</label>
+    <input type="text" formControlName="category">
+    </div>
+
+    <div>
+    <label>Genre</label>
+    <input type="text" formControlName="genre">
+    </div>
+
+    <div>
+    <label>Subgenre</label>
+    <input type="text" formControlName="subgenre">
+    </div>
+
+    <div *ngIf="booksForm.valid">
+        <input class="save" type="submit" value="Save">
+    </div>
+</form>

@@ -1,3 +1,10 @@
+@keyframes anim {
+
+    25%{
+        color: aqua;
+    }
+    
+}
 h1{
     text-align: center;
     color: hotpink;
@@ -5,7 +12,23 @@ h1{
     font-size: 60px;
     height: 90px;
     margin-top: 2%;
+    animation: anim 10s ease-in-out infinite;
 }
-h1:hover{
-    color: aqua;
+img{
+    display: inline-block;
+    height: 300px;
+    width: 450px;
+    margin-left: 120px;
+}
+p{
+    margin: 2% 5%;
+    color: green;
+    font-family: 'Century Schoolbook',Georgia,Times;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: justify;
+}
+a{
+    text-decoration: none;
+    color: slateblue;
 }
